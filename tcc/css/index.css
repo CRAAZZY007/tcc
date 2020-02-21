@@ -1,0 +1,301 @@
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+                   /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-image: url("../img/fundo2.jpg");
+	background-size: 450px 1000px;
+	background-repeat:no-repeat ;
+ 
+}
+
+/* Portrait layout (default) */
+.app {
+	    background-attachment:fixed;
+    background:url(../img/cego.png) no-repeat center top; /* 170px x 200px */
+    position:relative;             /* position in the center of the screen */
+    position:relative;             /* position in the center of the screen */
+    left:50%;
+    top:50%;
+    height:50px;                   /* text area height */
+    width:225px;                   /* text area width */
+    text-align:center;
+    padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+    margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
+                         
+        /* offset horizontal: half of text area width */
+}
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        background-position:left center;
+        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
+        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
+                                      /* offset horizontal: half of image width and text area width */
+    }
+}
+
+h1 {
+    font-size:24px;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
+}
+
+.event {
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    color:#FFFFFF;
+    font-size:12px;
+    margin:0px 30px;
+    padding:2px 0px;
+}
+
+.event.listening {
+    background-color:#333333;
+    display:block;
+}
+
+.event.received {
+    background-color:#4B946A;
+    display:none;
+}
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}
+
+#localizacao {
+	text-align: center;
+	height: 150px;
+	width: 150px;
+
+	border-style: none;
+
+	background: none;
+	
+	background-image: url("../img/gps.png");
+		background-size: cover;
+	
+}
+
+#pontos {
+	height: 150px;
+	width: 150px;
+	border-style: none;
+
+	background: none;
+ 
+	background-image:url("../img/Pontos.png");
+	background-size: cover;
+}
+
+#locais {
+	height: 150px;
+	width: 150px;
+	border-style: none;
+
+	background: none;
+ 
+	background-image: url("../img/Local.png");
+		background-size: cover;
+		
+}
+
+#rota {
+	height: 150px;
+	width: 150px;
+	
+	border-style: none;
+
+	background: none;
+ 
+	background-image: url("../img/Rotas.png");
+	background-size: cover;
+	
+	
+
+}
+
+#botoes {
+	width: 80%;
+	position: absolute;
+	z-index: 2;
+	left: 10%;
+	top: 15%;
+
+	font-size: 18px;
+}
+
+#mapa {
+	margin-top: 20%;
+	margin-left: 0%;
+	height:400px;
+	width: 350px;
+	position:relative;
+	z-index: 3;
+}
+
+#titulo2 {
+	text-align: center;
+	margin-top:5%;
+	font-size: 35px;
+	color: white;
+	position: absolute;
+}
+
+#subtitulo {
+	margin-top:5%;
+	font-size: 25px;
+	color: white;
+	position: absolute;
+}
+
+#redirecionar {
+	background: white;
+	border-top-width: 3px;
+	border-right-width: 3px;
+	border-bottom-width: 3px;
+	border-left-width: 3px;
+	border-bottom-style: solid;
+	border-top-color: black;
+	border-right-color: black;
+	border-bottom-color: black;
+	border-left-color: black;
+	margin-top: 30%;
+	margin-left: 30%;
+	height: 80px;
+	width: 150px;
+	font-family:Franklin Gothic Demi ;
+	font-size: 13px;
+	font-weight: bold;
+		border-radius: 20px;
+
+	
+}
+#redirecionar_pontos {
+	background:#FFFACD;
+	border-top-width: 3px;
+	border-right-width: 3px;
+	border-bottom-width: 3px;
+	border-left-width: 3px;
+	border-bottom-style: solid;
+	border-top-color: black;
+	border-right-color: black;
+	border-bottom-color: black;
+	border-left-color: black;
+	margin-left: 30%;
+	height: 80px;
+	width: 150px;
+	font-family:Franklin Gothic Demi ;
+	font-size: 13px;
+	font-weight: bold;
+		border-radius: 20px;
+
+	
+}
+#letras
+{
+	font-size: 26px;
+}
+
+#item
+{
+	background-color: white;
+	border-radius: 20px;
+}
+#imagem
+{
+	width: 150px;
+	height: 100px;
+	border-radius: 20px;
+}
+
+#imagem_detalhe
+{
+	width: 80%;
+	height: 300px;
+	border-radius: 20px;
+	
+    display: block;
+    margin-left: auto;
+    margin-right: auto 
+}
+#voltar {
+	text-align: center;
+	height: 50px;
+	width: 50px;
+    color: bold;
+	background:transparent;
+	border: transparent;
+	background-image: url("../img/voltar.png");
+	background-size: cover;
+	
+}
+#titulo_local
+{
+	font-size: 20px;
+}
+#load
+{
+	position:absolute;
+	z-index: -5;
+	top: 40%;
+	left: 100px;
+	height: 150px;
+}
+#logo
+{
+	margin-top: 15%;
+	position: relative;
+	
+
+	
+}
+#cego
+{
+	
+	height: 100px;
+	margin-left: 30px;
+	margin-bottom: -150%;
+	margin-left: 35%;
+	
+}
+#titulo
+{
+	margin-bottom: -180%;
+	font-size: 30px;
+	font-family: Courier New, monospace;
+	color: black;
+	margin-top: 150%;
+	margin-left: 25%;
+}
+
+.resumo
+{
+	font-size: 10px;
+}
+
+#sub {
+	margin-top: 175%;
+	font-size: 20px;
+	color: black;
+	margin-left: 65%;
+}
